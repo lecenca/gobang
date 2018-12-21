@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="lobbyPane" maxHeight="660.0" maxWidth="1149.0" minHeight="450.0" minWidth="732.0" prefHeight="450.0" prefWidth="732.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.view.LobbyController">
+    <children>
+        <Button layoutX="577.0" layoutY="376.0" mnemonicParsing="false" onAction="#logout" prefHeight="51.0" prefWidth="128.0" text="注销">
+            <font>
+                <Font size="15.0" />
+            </font></Button>
+        <Button fx:id="createRoomBtn" layoutX="411.0" layoutY="376.0" mnemonicParsing="false" onAction="#gotoCreateRoom" prefHeight="51.0" prefWidth="128.0" text="创建房间">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <!--<fx:include fx:id="chatBox" layoutX="25.0" layoutY="380" opacity="0.75" prefHeight="210" prefWidth="680.0" source="ChatBox.fxml" />-->
+        <TableView fx:id="roomList" layoutX="25.0" layoutY="20.0" onMouseClicked="#clickRoom" opacity="0.75" prefHeight="340.0" prefWidth="680.0">
+            <columns>
+                <TableColumn fx:id="roomNameCol" prefWidth="240.0" text="房间名称" />
+                <TableColumn fx:id="player1Col" prefWidth="220.0" text="玩家/黑" />
+                <TableColumn fx:id="player2Col" prefWidth="220.0" text="玩家/白" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
